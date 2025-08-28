@@ -1,7 +1,14 @@
+
+import { useNavigate } from "react-router";
+
 export const HomePage = () => {
-    return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
-    );
-}
+  const navigate = useNavigate();
+
+  return (
+    <button onClick={() => navigate("/about")}>
+      About
+    </button>
+  );
+};
+
+export default HomePage;

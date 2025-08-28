@@ -1,12 +1,13 @@
-import { StrictMode } from 'react';
-
-import './index.css';
-
+import { lazy, StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
-import { HomePage } from './pages/home/home.page';
-import { AboutPage } from './pages/about/about.page';
+
+import './index.css';
+
+const HomePage = lazy(() => import('./pages/home/home.page'));
+const AboutPage = lazy(() => import('./pages/about/about.page'));
+
 
 
 const router = createBrowserRouter([
